@@ -168,6 +168,16 @@ ORDER BY total_profit ASC;
 
 **Finding:** Texas posts by far the largest loss of any state — over 50% larger than the second-worst (Ohio). This warrants a dedicated investigation into what's driving underperformance there specifically.
 
+## Python Analysis
+
+Reproduced all business questions from the SQL analysis (Q1–Q5, Q7) using Python and Pandas. A data quality check was performed before the analysis, confirming no missing values across all 9,994 rows.
+
+All results matched the SQL queries exactly, validating the reliability of the findings. This also demonstrates that the same business question can be approached with different tools — SQL works well for querying within a database environment, while Pandas offers more flexibility for data manipulation and further modelling.
+
+**Key Pandas operations used:** `groupby` aggregation, calculated columns, sorting, and data quality checks.
+
+**File:** `analysis.py`
+
 ## Key Insight
 
 Overall, the data suggests that aggressive discounting is eroding profitability in several sub-categories, particularly Tables and Bookcases. While some high-discount items like Binders remain profitable, this appears to be the exception rather than the rule. Combined with significant losses concentrated in a few states like Texas and Ohio, this points to a need for a more selective discount strategy — one that considers both product-level and regional profitability rather than applying discounts uniformly.
@@ -175,4 +185,5 @@ Overall, the data suggests that aggressive discounting is eroding profitability 
 ## Files in this Repo
 
 - `queries.sql` — All SQL queries used in this analysis (Q1–Q7), with comments explaining each business question
+- `analysis.py` — Python/Pandas version of the same analysis, used for cross-validation
 - `README.md` — This file
