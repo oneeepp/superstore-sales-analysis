@@ -184,6 +184,8 @@ Used a pivot table to cross-analyse Region against Category — a dimension not 
 
 Conditional formatting was applied to automatically flag negative profit. This revealed that **Furniture in the Central region is the only loss-making combination (-$2,871)**, while the same category generates $11,505 in profit in the West region — indicating the issue is region-specific rather than a structural problem with the category itself.
 
+![Pivot table showing profit by region and category](pivot_profit_by_region_category.png)
+
 Notably, Technology performs strongly in the Central region ($33,697), making it the region's best-performing category. This suggests a possible resource reallocation: **rather than attempting to rescue Furniture sales in Central, it may be worth reducing investment in that category locally and shifting resources towards Technology.**
 
 **A caveat:** this analysis is based on a single static snapshot of data. It cannot distinguish between a long-term trend and a short-term fluctuation (e.g. seasonality). Supporting a decision such as reducing investment would require data across a longer time period to confirm the pattern persists.
