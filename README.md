@@ -178,6 +178,20 @@ All results matched the SQL queries exactly, validating the reliability of the f
 
 **File:** `analysis.py`
 
+## Excel Analysis (Google Sheets)
+
+Used a pivot table to cross-analyse Region against Category — a dimension not covered in the SQL or Python stages, where regions and categories were only examined separately, making combined performance invisible.
+
+Conditional formatting was applied to automatically flag negative profit. This revealed that **Furniture in the Central region is the only loss-making combination (-$2,871)**, while the same category generates $11,505 in profit in the West region — indicating the issue is region-specific rather than a structural problem with the category itself.
+
+Notably, Technology performs strongly in the Central region ($33,697), making it the region's best-performing category. This suggests a possible resource reallocation: **rather than attempting to rescue Furniture sales in Central, it may be worth reducing investment in that category locally and shifting resources towards Technology.**
+
+**A caveat:** this analysis is based on a single static snapshot of data. It cannot distinguish between a long-term trend and a short-term fluctuation (e.g. seasonality). Supporting a decision such as reducing investment would require data across a longer time period to confirm the pattern persists.
+
+**Excel features used:** pivot tables (including cross-dimensional analysis), percentage-of-total display, conditional formatting, VLOOKUP, and IF functions.
+
+*Download `superstore_excel_analysis.xlsx` and open in Excel or Google Sheets to view the pivot table configuration, formulas, and conditional formatting rules.*
+
 ## Key Insight
 
 Overall, the data suggests that aggressive discounting is eroding profitability in several sub-categories, particularly Tables and Bookcases. While some high-discount items like Binders remain profitable, this appears to be the exception rather than the rule. Combined with significant losses concentrated in a few states like Texas and Ohio, this points to a need for a more selective discount strategy — one that considers both product-level and regional profitability rather than applying discounts uniformly.
@@ -186,4 +200,5 @@ Overall, the data suggests that aggressive discounting is eroding profitability 
 
 - `queries.sql` — All SQL queries used in this analysis (Q1–Q7), with comments explaining each business question
 - `analysis.py` — Python/Pandas version of the same analysis, used for cross-validation
+- `superstore_excel_analysis.xlsx` — Excel workbook with pivot tables, VLOOKUP, and conditional formatting
 - `README.md` — This file
