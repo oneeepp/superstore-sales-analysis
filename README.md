@@ -198,9 +198,24 @@ Notably, Technology performs strongly in the Central region ($33,697), making it
 
 Overall, the data suggests that aggressive discounting is eroding profitability in several sub-categories, particularly Tables and Bookcases. While some high-discount items like Binders remain profitable, this appears to be the exception rather than the rule. Combined with significant losses concentrated in a few states like Texas and Ohio, this points to a need for a more selective discount strategy — one that considers both product-level and regional profitability rather than applying discounts uniformly.
 
+## Power BI Analysis
+
+Used Power BI (web version) to further validate and analyze the dataset at a more granular level.
+
+![Dashboard Screenshot](superstore_sale_dashboard.png)
+
+### Key Insight
+
+Cross-analyzing Region and Sub-Category revealed that Furnishings, not the Furniture category as a whole, is the primary driver of losses in the Central region. Other Furniture sub-categories (Bookcases, Chairs, Tables) show far smaller losses in comparison. This more granular finding suggests that inventory or promotional strategies should be adjusted specifically for Furnishings in Central, rather than the entire Furniture category.
+
+Interestingly, Binders has the highest discount rate (37%) among all sub-categories, yet it still maintains a notably strong profit margin of 14.86%. This exception challenges the assumption that discount and profit margin are simply negatively correlated, and suggests that Binders may have a unique competitive advantage that allows it to remain profitable even under heavy discounting.
+
+
 ## Files in this Repo
 
 - `queries.sql` — All SQL queries used in this analysis (Q1–Q7), with comments explaining each business question
 - `analysis.py` — Python/Pandas version of the same analysis, used for cross-validation
 - `superstore_excel_analysis.xlsx` — Excel workbook with pivot tables, VLOOKUP, and conditional formatting
+- `practice_superstore.pbix` — Power BI report file with interactive dashboard
+- `superstore_sale_dashboard.png` — Dashboard preview screenshot
 - `README.md` — This file
